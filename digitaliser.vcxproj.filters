@@ -4,9 +4,6 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\examples\gui\sample.cpp">
-      <Filter>src\examples\gui</Filter>
-    </ClCompile>
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -39,6 +36,9 @@
     </ClCompile>
     <ClCompile Include="..\ofx\openFrameworks\addons\ofxGui\src\ofxToggle.cpp">
       <Filter>addons\ofxGui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\examples\gui\sample.cpp">
+      <Filter>src\examples\gui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
