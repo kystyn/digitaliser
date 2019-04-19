@@ -40,6 +40,9 @@
     <ClCompile Include="src\examples\gui\sample.cpp">
       <Filter>src\examples\gui</Filter>
     </ClCompile>
+    <ClCompile Include="src\examples\basler\sample.cpp">
+      <Filter>src\examples\basler</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -59,6 +62,9 @@
     </Filter>
     <Filter Include="addons\ofxGui\src">
       <UniqueIdentifier>{645E9533-4DCD-6179-1CDF-CB65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\examples\basler">
+      <UniqueIdentifier>{66510d44-4ec3-4375-8283-bbad2e3a3b2c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +106,9 @@
     </ClInclude>
     <ClInclude Include="..\ofx\openFrameworks\addons\ofxGui\src\ofxToggle.h">
       <Filter>addons\ofxGui\src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\examples\basler\sample.h">
+      <Filter>src\examples\basler</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

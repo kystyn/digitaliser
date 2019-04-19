@@ -180,6 +180,7 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\examples\basler\sample.cpp" />
     <ClCompile Include="src\examples\gui\sample.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="..\ofx\openFrameworks\addons\ofxGui\src\ofxBaseGui.cpp" />
@@ -195,6 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\def.h" />
+    <ClInclude Include="src\examples\basler\sample.h" />
     <ClInclude Include="src\examples\gui\sample.h" />
     <ClInclude Include="..\ofx\openFrameworks\addons\ofxGui\src\ofxBaseGui.h" />
     <ClInclude Include="..\ofx\openFrameworks\addons\ofxGui\src\ofxButton.h" />
