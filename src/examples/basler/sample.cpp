@@ -1,5 +1,6 @@
 #include <iostream>
 #include "sample.h"
+#include "../../utils/utils.h"
 
 using namespace std;
 
@@ -23,7 +24,8 @@ void dgtl::example::basler::update( void ) {
     // Image grabbed successfully?
     if (GrabResultPtr->GrabSucceeded()) {
       const uint8_t *ImageBuffer = (uint8_t *) GrabResultPtr->GetBuffer();
-      Pixels.setFromPixels(ImageBuffer, GrabResultPtr->GetWidth() / 2, GrabResultPtr->GetHeight(), OF_PIXELS_RGBA);
+      Pixels.setFromPixels(ImageBuffer, GrabResultPtr->GetWidth(), GrabResultPtr->GetHeight(), OF_PIXELS_UYVY);
+			YUV2RGB(Pixels);
       Frame.setFromPixels(Pixels);
     } else {
       cout << "Error: " << GrabResultPtr->GetErrorCode() << " " << GrabResultPtr->GetErrorDescription() << endl;

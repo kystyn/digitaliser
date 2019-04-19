@@ -66,6 +66,9 @@
     <Filter Include="src\examples\basler">
       <UniqueIdentifier>{66510d44-4ec3-4375-8283-bbad2e3a3b2c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{daa82e94-7d4c-4693-99ab-8af78e1c016f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\def.h">
@@ -109,6 +112,9 @@
     </ClInclude>
     <ClInclude Include="src\examples\basler\sample.h">
       <Filter>src\examples\basler</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\utils.h">
+      <Filter>src\utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
