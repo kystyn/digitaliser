@@ -23,9 +23,10 @@ void dgtl::example::basler::update( void ) {
 
     // Image grabbed successfully?
     if (GrabResultPtr->GrabSucceeded()) {
-      const uint8_t *ImageBuffer = (uint8_t *) GrabResultPtr->GetBuffer();
-      Pixels.setFromPixels(ImageBuffer, GrabResultPtr->GetWidth(), GrabResultPtr->GetHeight(), OF_PIXELS_UYVY);
-			YUV2RGB(Pixels);
+      const uint8_t *ImageBuffer = (uint8_t *)GrabResultPtr->GetBuffer();
+      //auto t = GrabResultPtr->GetPixelType();
+      Pixels.setFromPixels(ImageBuffer, GrabResultPtr->GetWidth(), GrabResultPtr->GetHeight(), OF_PIXELS_YUY2);
+      YUV2RGB(Pixels);
       Frame.setFromPixels(Pixels);
     } else {
       cout << "Error: " << GrabResultPtr->GetErrorCode() << " " << GrabResultPtr->GetErrorDescription() << endl;
@@ -46,7 +47,7 @@ dgtl::example::basler::basler( void ) :
     cout << "Using device " << CameraInstance.GetDeviceInfo().GetModelName() << endl;
     // The parameter MaxNumBuffer can be used to control the count of buffers
     // allocated for grabbing. The default value of this parameter is 10.
-    CameraInstance.MaxNumBuffer = 5;
+    CameraInstance.MaxNumBuffer = NoofImagesToGrab;
   } catch (const Pylon::GenericException &e) {
     cout << e.what();
   }
