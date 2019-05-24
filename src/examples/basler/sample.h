@@ -1,6 +1,7 @@
 #pragma once
 
 #include <pylon/PylonIncludes.h>
+#include <array>
 #include "ofMain.h"
 #include "def.h"
 
@@ -15,8 +16,8 @@ public:
 
 private:
   Pylon::CTlFactory &Factory;
-  Pylon::CInstantCamera CameraInstance;
-  ofImage Frame;
+  Pylon::CInstantCameraArray CameraInstances;
+  std::array<ofImage, 2> Frame;
   ofPixels Pixels;
   uint
     NoofImagesToGrab,
